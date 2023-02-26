@@ -136,7 +136,8 @@ address {
   left: 0;
   width: 100%;
   height: 4px;
-  color: var(--secondary-brand-color);
+  background-color: var(--secondary-brand-color);
+  border-radius: 2px;
   content: '';
 }
 .auth-links {
@@ -490,6 +491,7 @@ address {
 }
 .modal {
   position: absolute;
+  overflow: auto;
   width: 100%;
   height: 100%;
   max-width: 408px;
