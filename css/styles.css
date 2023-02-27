@@ -437,6 +437,10 @@ address {
 .portfolio-list a {
   background-color: #f4f4fd;
 }
+.portfolio-list a:hover .image-info,
+.portfolio-list a:focus .image-info {
+  transform: translate(0, 0);
+}
 .portfolio-list .item {
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -457,22 +461,22 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   padding: 0 20px;
+
   color: #fff;
   background-color: var(--secondary-brand-color);
+
   transform: translate(0, 100%);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio-list a:hover .image-info,
-.portfolio-list a:focus .image-info {
-  transform: translate(0, 0);
 }
 
 .porfolio-info {
