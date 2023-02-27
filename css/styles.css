@@ -45,8 +45,9 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-box .link {
   display: block;
@@ -129,6 +130,7 @@ address {
 }
 .current {
   position: relative;
+  color: var(--secondary-brand-color);
 }
 .current::after {
   position: absolute;
@@ -183,8 +185,9 @@ address {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -270,8 +273,9 @@ address {
   height: 40px;
   background-color: var(--main-brand-color);
   border-radius: 50%;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list > .item:hover,
 .social-list > .item:focus {
@@ -304,8 +308,6 @@ address {
   justify-content: center;
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
 }
 
 .customer-list a {
@@ -315,8 +317,11 @@ address {
   width: 100%;
   height: 100%;
   color: #afb1b8;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  transition-property: color, border;
   transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-list a:hover,
 .customer-list a:focus {
@@ -367,8 +372,9 @@ address {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -391,8 +397,9 @@ address {
   border-radius: 4px;
 
   padding: 12px 24px;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -425,10 +432,13 @@ address {
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.portfolio-list .item {
+.portfolio-list a {
   background-color: #f4f4fd;
-  transition: 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list .item {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list .item:hover,
 .portfolio-list .item:focus {
@@ -454,10 +464,12 @@ address {
   color: #fff;
   background-color: var(--secondary-brand-color);
   transform: translate(0, 100%);
-  transition: translate, 250ms;
-  animation: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list .item:hover .image-info {
+.portfolio-list a:hover .image-info,
+.portfolio-list a:focus .image-info {
   transform: translate(0, 0);
 }
 
@@ -487,7 +499,9 @@ address {
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms, visibility 250ms;
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -497,7 +511,9 @@ address {
   max-width: 408px;
   max-height: 576px;
   background-color: #fcfcfc;
+  transition-property: scale;
   transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden .modal {
   transform: scale(0);
@@ -516,6 +532,7 @@ address {
 .modal-btn:hover {
   background-color: var(--secondary-brand-color);
   color: #fff;
+  cursor: pointer;
 }
 .modal-icon {
   fill: currentColor;
